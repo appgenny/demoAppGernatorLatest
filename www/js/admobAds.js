@@ -76,32 +76,23 @@ function initAd(){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-       
+      alert('asdasdasd');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
-      var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayer")));
-      alert('my open Model Id is'+ openVideoModelId);
+      alert('my open Model');
       if(openVideoModelId != '' || openVideoModelId != null)
        {
-
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-       if(runVideoPlayer.length != 0 )
-       {
-        var videoId =  runVideoPlayer[0];
-        var platform = runVideoPlayer[1];
-        runVideoPlayer(videoid , platform);
-        localStorage.setItem("runVideoPlayer",'');
-        }
       } 
-    else if(data.adType === 'rewardvideo') {
+        else if(data.adType === 'rewardvideo') {
         $('#h3_video').text('Rewarded Video');
         $('#btn_showvideo').prop('disabled', true);
       }
     });
 
     $(document).on('resume', function(){
-     // AdMob.showInterstitial();
+      AdMob.showInterstitial();
     });
   }
   
