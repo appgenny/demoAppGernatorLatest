@@ -76,7 +76,7 @@ function initAd(){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      alert('asdasdasd');
+      alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       alert('my open Model');
       if(openVideoModelId != '' || openVideoModelId != null)
@@ -92,8 +92,19 @@ function initAd(){
     });
 
     $(document).on('resume', function(){
-     alert('resume Faction working');
-     var openVideoModelId =  localStorage.getItem("openVideoModelId");
+    if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
+      var data = e.data || e;
+      if(data.adType === 'interstitial') {
+      alert('onResume');
+      var openVideoModelId =  localStorage.getItem("openVideoModelId");
+      alert('my open Model');
+      if(openVideoModelId != '' || openVideoModelId != null)
+       {
+        openModel(openVideoModelId);
+        localStorage.setItem("openVideoModelId",'');
+       }
+      } 
+
      // AdMob.showInterstitial();
     });
   }
