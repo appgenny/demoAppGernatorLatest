@@ -74,10 +74,6 @@ var sum = (x*100 + y*100) / 100;
 {
 
 prepareInterstitialAd();  
-$('#img_link').css('display','none');
-$('#video_list').css('display', 'none');
-$('.my_lazy_loader').removeClass( "hide" );
-$('.my_lazy_loader').show();
 var id = $(object).attr('id');
   openModel(id);
 }
@@ -85,10 +81,6 @@ var id = $(object).attr('id');
 else
 {
 //prepareInterstitialAd();  
-$('#img_link').css('display','none');
-$('#video_list').css('display', 'none');
-$('.my_lazy_loader').removeClass( "hide" );
-$('.my_lazy_loader').show();
 var id = $(object).attr('id');
 openModel(id);
 }
@@ -105,12 +97,14 @@ var settings = {
     "Postman-Token": "9300a46c-448f-49be-b9d8-c86ef37645f5"
   }
 }
+$('#img_link').css('display','none');
+$('#video_list').css('display', 'none');
+$('.my_lazy_loader').removeClass( "hide" );
+$('.my_lazy_loader').show();
 $("#myModal").animate({width:'toggle'},100);
 $.ajax(settings).done(function (response) {
 if(response.Keyword != null && response.RedirectLink == false)
 	{
-
-
  $('#myModal .modal-content').css('background-color' , '#fff');
  $('.post_title').html(response.Title);
 //youtube

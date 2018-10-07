@@ -76,7 +76,7 @@ function initAd(){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      alert('onAdDismiss');
+      //alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       alert('my open Model');
       if(openVideoModelId != '' || openVideoModelId != null)
@@ -92,7 +92,7 @@ function initAd(){
     });
 
     $(document).on('resume', function(){
-     alert('onresume');
+     //alert('onresume');
      var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
