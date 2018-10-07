@@ -92,7 +92,9 @@ function initAd(){
     });
 
     $(document).on('resume', function(){
-      AdMob.showInterstitial();
+     alert('resume Faction working');
+     var openVideoModelId =  localStorage.getItem("openVideoModelId");
+     // AdMob.showInterstitial();
     });
   }
   
