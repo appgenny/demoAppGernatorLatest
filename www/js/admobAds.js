@@ -92,19 +92,13 @@ function initAd(){
     });
 
     $(document).on('resume', function(){
-    if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
-      var data = e.data || e;
-      if(data.adType === 'interstitial') {
-      alert('onResume');
-      var openVideoModelId =  localStorage.getItem("openVideoModelId");
-      alert('my open Model');
+     alert('onresume');
+     var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-      } 
-
      // AdMob.showInterstitial();
     });
   }
