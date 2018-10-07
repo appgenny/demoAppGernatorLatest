@@ -154,7 +154,7 @@ function initAd(){
   });
   }
   function initAdmobWithoutBanner() {
-    AdMob.removeBanner(); 
+    AdMob.hideBanner();
   }
 
   if(( /(ipad|iphone|ipod|android|windows phone)/i.test(navigator.userAgent) )) {

@@ -18,7 +18,7 @@
             $('#videoModal').css('display' , 'none');
             $('#myModal').css('display' , 'block');
             window.screen.orientation.lock('portrait');
-          //  showBanner();
+            showBannerAtPosition();
             $('#videoplayer').attr('src', '');
         }
 
@@ -28,13 +28,13 @@
             $('#myModal').css('display' , 'none');
             $('#videoplayer').attr('src', '');
             window.screen.orientation.lock('portrait');
-            //showBanner();
+            showBannerAtPosition();
         }
         else
         {
             $('.complete').addClass('myoverlay');
              $('#backbutton').css('display','block');
-             //showBanner();
+             showBannerAtPosition();
        }
    }
 
