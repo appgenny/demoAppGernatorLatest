@@ -70,7 +70,7 @@ function initAd(){
     $(document).on('onAdPresent', function(e){
     });
     $(document).on('onAdLeaveApp', function(e){
-    });
+   });
     
     $(document).on('onAdDismiss', function(e){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
@@ -78,12 +78,22 @@ function initAd(){
       if(data.adType === 'interstitial') {
       //alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
-      alert('my open Model');
+       var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayer")));
       if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
+       if(runVideoPlayer.length != 0 )
+       {
+        var videoId =  runVideoPlayer[0];
+        var platform = runVideoPlayer[1];
+        runVideoPlayer(videoid , platform);
+        localStorage.setItem("runVideoPlayer",'');
+
+       }
+
+
       } 
         else if(data.adType === 'rewardvideo') {
         $('#h3_video').text('Rewarded Video');
@@ -99,6 +109,13 @@ function initAd(){
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
+       if(runVideoPlayer.length != 0 )
+       {
+        var videoId =  runVideoPlayer[0];
+        var platform = runVideoPlayer[1];
+        runVideoPlayer(videoid , platform);
+        localStorage.setItem("runVideoPlayer",'');
+      }
      // AdMob.showInterstitial();
     });
   }

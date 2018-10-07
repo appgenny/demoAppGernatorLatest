@@ -106,9 +106,9 @@ var y = localStorage.getItem("counterAds");
 var x  = 1;
 var sum = (x*100 + y*100) / 100;
 localStorage.setItem("counterAds",sum);
-var response = JSON.parse((localStorage.getItem("item")));
-var admobCheck = response[7];
-var admobLimit = response[2];
+var myres = JSON.parse((localStorage.getItem("item")));
+var admobCheck = myres[7];
+var admobLimit = myres[2];
 console.log('admobLimit'+admobLimit);
 if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 {
@@ -118,19 +118,19 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	admobLimit = response[2];
 	if(counterAds == admobLimit)
 	{
-	showIndustrialAd();
-	var videoInfo = [];
-	videoInfo.push(videoid);
-	videoInfo.push(platform);
-	localStorage.setItem("runVideoPlayer",JSON.stringify(videoInfo));
-	prepareInterstitialAd();
-	localStorage.setItem("counterAds",'0');
-  	}
+		showIndustrialAd();
+		var videoInfo = [];
+		videoInfo.push(videoid);
+		videoInfo.push(platform);
+		localStorage.setItem("runVideoPlayer",JSON.stringify(videoInfo));
+		localStorage.setItem("counterAds",'0');
+		prepareInterstitialAd();
+	}
 	else
 	{
 		runVideoPlayer(videoid , platform);
 	//	initAdmobWithoutBanner();
-	}
+}
 
 }
 else
@@ -150,15 +150,14 @@ function runVideoPlayer(videoid , platform)
 			$('#videoModal').css('display', 'block');
 			//$("#videoModal").animate({width:'toggle'},300);
 			if (platform == 'dailymotion') {
+				initAdmobWithoutBanner();
 				window.screen.orientation.lock('landscape');
 				videourl = 'https://www.dailymotion.com/embed/video/'+videoid+'?queue-enable=false';
 				$('#videoplayer').attr('src' , videourl);
 			}
 			if(platform == 'youtube')
 			{
-
-					YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
 				
-
 			}
 		}
