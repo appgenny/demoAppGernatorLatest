@@ -1,0 +1,78 @@
+{
+  "_from": "onesignal-cordova-plugin-pgb-compat",
+  "_id": "onesignal-cordova-plugin-pgb-compat@2.0.10",
+  "_inBundle": false,
+  "_integrity": "sha1-r3+QdWxfgGvtrmbpAfR0PGETUHI=",
+  "_location": "/onesignal-cordova-plugin-pgb-compat",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "onesignal-cordova-plugin-pgb-compat",
+    "name": "onesignal-cordova-plugin-pgb-compat",
+    "escapedName": "onesignal-cordova-plugin-pgb-compat",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/onesignal-cordova-plugin-pgb-compat/-/onesignal-cordova-plugin-pgb-compat-2.0.10.tgz",
+  "_shasum": "af7f90756c5f806bedae66e901f4743c61135072",
+  "_spec": "onesignal-cordova-plugin-pgb-compat",
+  "_where": "C:\\cordova\\newone",
+  "author": {
+    "name": "Josh Kasten"
+  },
+  "bugs": {
+    "url": "https://github.com/one-signal/OneSignal-Cordova-SDK/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "onesignal-cordova-plugin-pgb-compat",
+    "platforms": [
+      "android",
+      "ios",
+      "amazon-fireos"
+    ]
+  },
+  "cordova_name": "OneSignal Push Notifications Compat",
+  "deprecated": false,
+  "description": "NOTE: Only use for PhoneGap Build, otherwise use onesignal-cordova-plugin instead. Follow our [setup guide](http://documentation.onesignal.com/docs/phonegap-sdk-overview) to get started.",
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.3.0"
+    }
+  ],
+  "homepage": "https://github.com/one-signal/OneSignal-Cordova-SDK#readme",
+  "keywords": [
+    "push",
+    "notification",
+    "push notification",
+    "push notifications",
+    "apns",
+    "gcm",
+    "adm",
+    "retention",
+    "messaging",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-amazon-fireos"
+  ],
+  "license": "MIT",
+  "name": "onesignal-cordova-plugin-pgb-compat",
+  "platforms": [
+    "android",
+    "ios",
+    "amazon-fireos"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/one-signal/OneSignal-Cordova-SDK.git#PGB-Compat"
+  },
+  "version": "2.0.10"
+}

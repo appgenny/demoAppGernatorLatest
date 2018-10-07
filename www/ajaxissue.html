@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ajax Issue</title>
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/loader.css">
+</head>
+<body>
+
+<div class="loader"  style="background-color:#BF9C9E; background-image: url('img/issuespash.png') !important;">
+
+	<div id="error"></div>
+  
+  <div class="" style="position: fixed;
+    height: 97px;left: 66%;top: 52%;z-index: 999999;margin: 0 0 0 -25%;">
+  <div class="col-xs-12 col-sm-12">
+    <div style="float: left;">
+    <img class="" src="img/loading-transparent-gif-2.gif" style="width: 179px">
+  </div>
+  
+  </div>
+</div>
+</div>
+</body>
+    <script type="text/javascript" src="cordova.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script type="text/javascript">
+	function checkAjax(pkgname)
+	{
+		var base_url = "http://appqubz-001-site1.etempurl.com/";
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://appqubz-001-site2.etempurl.com/api/vi/GetApplicationSetting/PakegName?pakgeName="+pkgname,
+  "method": "GET",
+  "headers": {
+    "Cache-Control": "no-cache",
+    "Postman-Token": "03ce7257-9417-4006-963b-030143c6cdfe"
+  }
+}
+var rowDisplay = '';
+
+$.ajax(settings).done(function (response)
+{
+
+window.location.href = "index.html";
+}).error(function(error){
+ $('#error').html('<b>Please check Your connectivity. OR May be server issue.</b>')
+ });
+	}
+
+function checkAjaxAfterTimePeriod(){
+	cordova.getAppVersion.getPackageName(function(pkgname){
+	checkAjax(pkgname);
+	});
+	}
+
+
+setInterval(function(){ checkAjaxAfterTimePeriod() }, 10000);
+
+</script>
+
+</html>

@@ -1,0 +1,53 @@
+{
+  "_from": "cordova-plugin-imagedownloader",
+  "_id": "cordova-plugin-imagedownloader@1.0.3",
+  "_inBundle": false,
+  "_integrity": "sha1-bg0618449M9PxMtJqSgODGYbOnU=",
+  "_location": "/cordova-plugin-imagedownloader",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-imagedownloader",
+    "name": "cordova-plugin-imagedownloader",
+    "escapedName": "cordova-plugin-imagedownloader",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-imagedownloader/-/cordova-plugin-imagedownloader-1.0.3.tgz",
+  "_shasum": "6e0d3ad7ce38f4cf4fc4cb49a9280e0c661b3a75",
+  "_spec": "cordova-plugin-imagedownloader",
+  "_where": "C:\\cordova\\newone",
+  "author": {
+    "name": "Santino-Wu"
+  },
+  "bugs": {
+    "url": "https://github.com/Santino-Wu/cordova-plugin-imagedownloader/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "The cordova plugin for downloading image into gallery.",
+  "homepage": "https://github.com/Santino-Wu/cordova-plugin-imagedownloader#readme",
+  "keywords": [
+    "Cordova",
+    "Image",
+    "Downloader",
+    "Gallery"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "cordova-plugin-imagedownloader",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.3"
+}

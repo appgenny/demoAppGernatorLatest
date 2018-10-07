@@ -1,0 +1,52 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "com.bunkerpalace.cordova.YoutubeVideoPlayer": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "com.santinowu.cordova.imagedownloader": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-admobpro": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-app-version": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-customconfigparameters": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-screen-orientation": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "onesignal-cordova-plugin": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "onesignal-cordova-plugin-pgb-compat": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    }
+  },
+  "dependent_plugins": {
+    "cordova-plugin-extension": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    },
+    "es6-promise-plugin": {
+      "PACKAGE_NAME": "com.ownapp.songspak"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Pak Songs",
+  "short_name": "Pak Songs",
+  "version": "com.ownapp.songspak",
+  "author": "Apache Cordova Team",
+  "icons": [
+    {
+      "src": "www/img/icon.png",
+      "type": "image/png",
+      "sizes": "undefinedxundefined"
+    }
+  ],
+  "start_url": "index.html"
+}

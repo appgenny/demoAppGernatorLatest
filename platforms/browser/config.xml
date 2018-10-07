@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.ownapp.songspak" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>Pak Songs</name>
+    <description>
+    </description>
+    <author email="dev@cordova.apache.org" href="http://cordova.io">
+        Apache Cordova Team
+    </author>
+    <icon src="www/img/icon.png" />
+    <content src="index.html" />
+    <access origin="*" />
+    <allow-intent href="http://*/*" />
+    <allow-intent href="https://*/*" />
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+    <allow-intent href="mailto:*" />
+    <allow-intent href="geo:*" />
+    <preference name="android-minSdkVersion" value="16" />
+    <preference name="android-maxSdkVersion" value="28" />
+    <preference name="android-targetSdkVersion" value="27" />
+    <preference name="android-build-tool" value="gradle" />
+    <preference name="StatusBarOverlaysWebView" value="true" />
+    <preference name="onesignal" value="86062c1c-731e-4018-a530-d7630cfe8300" />
+    <preference name="admobBannerId" value="ca-app-pub-3940256099942544/6300978111" />
+    <preference name="admobInterstitialId" value="ca-app-pub-3940256099942544/1033173712" />
+</widget>

@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title class="getname"></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; media-src *; img-src * filesystem: data:">
+
+    <link  rel="shortcut icon" class="icon_href" href="">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+    <!-- <link rel="stylesheet" href="css/slid.css">
+    -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.event.swipe.js"></script>
+    <script src="js/appsetting.js"></script>
+    <script type="text/javascript" src="js/youtubeAndDailymotionSearch.js"></script>
+    <script type="text/javascript" src="js/videoPost.js"></script>
+    <script type="text/javascript" src="js/getallPost.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="js/wallpaperPost.js"></script>
+    <script type="text/javascript" src="js/promotionLink.js"></script>
+    <script type="text/javascript" src="js/admobAds.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/video.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+
+</head>
+
+
+<body onload="onLoad()" class="home"  >
+    <!--loader image starts -->
+
+    <div class="my_lazy_loader hide">
+      <div class="getname"></div>
+      <div class="col-xs-12 col-sm-12">
+        <div style="float: left;">
+            <img class="lazy_loader_img" src="img/loading.gif">
+        </div>
+        <div style="    padding: 12px;">
+            <span class="lazy_loader_text">Loading......</span>
+        </div>
+    </div>
+</div>
+<div class="loader"  style="background-color:#BF9C9E; background-image: url('img/splash.png') !important;">
+
+</div>
+<!-- loader image ends-->
+
+<div class="complete hide">
+
+    <!-- nav bar starts -->
+
+    <div style="padding-top: 3px;position: fixed;
+    width: 100%;" class="navbar backgroundClor">
+    <div>
+
+        <!--logo starts -->
+
+        <div class="site-title logo_div">
+            <img id="logo_src" src="" alt="Loading Image" height="50px"  >
+
+
+        </div>
+        <div id="backSearhBar" class="fa fa-arrow-left hide" style="color: white;
+        margin-top: 6%;
+        margin-left: 2%;
+        margin-right: 2%;
+        font-size: 26px;
+        font-weight: 100;">
+    </div>
+    <div class="js-wrapper" style="float: right;
+    text-align: right;">
+<!-- <div class="glass">
+<div class="glass-body"></div>
+<div class="glass-handle"></div>
+</div> -->
+
+<input type="text"  class="searchbar" placeholder="Search Any Video">
+
+<a id="search_btn" ><i class="fa fa-2x fa-search"></i></a>
+
+
+
+</div>
+
+<!--logo ends -->
+
+<!--<input type="submit" id ="btn" onclick="check()"></input>-->
+<div class="panel-control-right hide">
+    <a href="contact.html"><i class="fa fa-envelope-o"></i></a>
+</div>
+</div>
+</div>
+<!-- slider -->
+<div id="mainSlider">
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" >
+
+        <!-- Indicators -->
+        <ol class="carousel-indicators hide">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner">
+
+      </div>
+
+      <!-- Left and right controls -->
+      <a class="left hide carousel-control" id="left_carousel_main_slider" href="#myCarousel" data-slide="prev">
+          <span class="glyphicon glyphicon-chevron-left"></span>
+          <span class="sr-only">Previous</span>
+      </a>
+      <a class="right  hide carousel-control" id="right_carousel_main_slider" href="#myCarousel" data-slide="next">
+          <span class="glyphicon glyphicon-chevron-right"></span>
+          <span class="sr-only">Next</span>
+      </a>
+  </div>
+</div>
+
+<!-- end slider -->
+<!--Title & description-->
+<div class="services descriptionDiv" >
+  <div class="container">           
+    <div class="col s6">
+      <div class="entry">
+
+
+        <p style="padding-top: 3px" id="descriptionId"></p>
+    </div>
+</div>
+</div>
+</div>
+<!--Title & description-->
+
+
+<!--Here is thumbnail slider -->
+    <!--     <div class="container">
+  
+  <div class='row'>
+    <div class='col-md-8'>
+      <div class="carousel slide media-carousel" id="media">
+        <div class="carousel-inner">
+          
+        </div>
+
+        <a data-slide="prev" href="#media" id="left_gallery_image_slider" class="left carousel-control">‹</a>
+        <a data-slide="next" href="#media" id="right_gallery_image_slider" class="right carousel-control">›</a>
+      </div>                          
+    </div>
+  </div>
+</div>
+
+-->
+<!--End of thumbnail slider -->
+
+<div class="latest-blog">
+    <div class="container">
+
+        <div class="row  ">
+            <div id="main_content">
+                <!--Show Video here-->
+            </div>
+        </div>
+               <!--  <div class="row"><div id="main_content_wallpaper">
+                        
+                        
+                    </div></div>
+
+                    <div class="row">
+                      <div id="main_content_promotionLink">
+                       
+                      </div></div> -->
+                  </div>
+              </div>
+              <!--End section Category Image slider -->
+
+          </div>
+          <!--model box to show single wallpaper images-->
+          <div id="wallpaperModal" class="modal">
+            <img src="img/dlicon.png" id="saveImg" onclick="downloadImg(this)">
+            <span class="closewallpaper">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+
+        </div>
+        <!--model box to show single wallpaper images-->
+
+        <!-- model box to show data -->
+        <div id="videoModal" class="modal">
+            <div class="modal-content">
+                <div class="w3-bar" style="margin-left: -3px;margin-top:-2px; width: 100%; height:51px;">
+                    <a href="#" id="closeVideoModel">
+                        <div class="fa fa-chevron-left" style="color: white; margin-top: 4%; margin-left: 2%; margin-right: 2%; font-size: 19px;" >
+                        </div>
+                        <img class="model_logo_img" src="" alt="" style="    margin-left:1%;margin-top: -1%;height: 46px;">
+                        <h4 class="post_title" style="margin-top: -9%;text-align: right;margin-right: 4%; text-shadow: white 2px 2px 10px;
+                        text-transform: uppercase;"></h4>
+                    </a>
+                </div>
+                <div class="videoContainer" > 
+
+                    <iframe id='videoplayer' width="100%" height="315" src="" frameborder="0" allow="autoplay; encrypted-media" allowFullScreen="allowFullScreen"></iframe>
+                    
+                </div>
+                <!--show video list-->
+
+                <!--end video list-->
+            </div>
+
+        </div>
+        <!-- model box to show data -->
+
+
+        <!-- model box to show only embeded Videos -->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="w3-bar" style="margin-top:-3px; margin-left: -3px; position:fixed; width: 102%;height:51px;">
+                    <a href="#" id="closeModel">
+                        <div class="fa fa-chevron-left" style="color: white; margin-top: 4%; margin-left: 2%; margin-right: 0%; font-size: 19px;" >
+                        </div>
+                        <img class="model_logo_img" src="" alt="" style="    margin-left:1%;margin-top: -1%;height: 46px;">
+                        <h4 class ="post_title" style="margin-top: -9%;color: white;
+                        text-align:right; margin-right: 4%; text-shadow: white 2px 2px 10px;
+                        text-transform: uppercase;""></h4>
+                    </a>
+                </div>
+                <div id="img_link" style="display: block;"> 
+                    <div class="latest-blog">
+                     <div class="container">
+                        <div class="row">
+                          <br>
+                          <br>
+                          <br>
+                          <div id="wallpaper_gallery">
+
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!--show video list-->
+          <br>
+          <br>
+          <br>
+          <div class="search_result_h3"></div>
+          <div id="video_list">
+
+          </div>
+          <!--end video list-->
+      </div>
+
+  </div>
+
+  <!--backbutton show model-->
+  <div class="model-overlay">
+    <!-- model box to show data -->
+    <div id="backbutton" class="modal">
+        <div >
+
+            <div class="main_bar" style="width: 101%;
+            margin-left: -3px;margin-top: -2px; height:51px;">
+            <h3 class="exit_app">Exit App</h3>
+        </div>
+        <div class="featured_apps">
+          <div class="container">
+            <div id=main_featured_app>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div>
+      <table>
+        <tr>
+            <td class="tableDataBtn"><a id="exit_app"  style="">Exit</a></td>
+            <td class="tableDataBtn"><a id="cancel_exit_app_model" style="">Cancel</a></td>
+            <tr>
+            </table>
+
+        </div>
+    </div>
+
+</div>
+<!-- model box to show data -->
+
+</div>
+<!--backbutton end show model-->
+
+<!-- model box to show only embeded Videos  -->
+<script type="text/javascript" src="js/backButton.js"></script>
+<script type="text/javascript" src="js/sliderSetting.js"></script>
+<script type="text/javascript" src="js/gallerySlider.js"></script>
+<script type="text/javascript" src="js/searchbar.js"></script>
+<script type="text/javascript" src="js/exitAppModel.js"></script>
+<script type="text/javascript" src="js/lazyLoaderImg.js"></script>
+
+
+
+<script type="text/javascript">
+
+  //slider category image 
+  $('#myCarousel').on('swipeleft', function(e) {
+   $("#right_carousel_main_slider").click();
+
+  //slides.eq(i + 1).addClass('active');
+})
+  $('#myCarousel').on('swiperight', function(e) {
+    $("#left_carousel_main_slider").click();
+
+});
+  $('#myCarousel').on('movestart', function(e) {
+          // If the movestart heads off in a upwards or downwards
+          // direction, prevent it so that the browser scrolls normally.
+          if ((e.distX > e.distY && e.distX < -e.distY) ||
+              (e.distX < e.distY && e.distX > -e.distY)) {
+            e.preventDefault();
+        return;
+    }
+
+})
+
+
+  
+
+
+  $(document).ready(function() {
+
+  });
+
+  $("#closeModel").click(function(){
+    //$('#myModal').css('display', 'none');
+    $("#myModal").animate({width:'toggle'},300);
+    $('.searchbar').val('');
+
+});
+  $('.closewallpaper').click(function(){
+      var modal = document.getElementById('wallpaperModal');
+      modal.style.display = "none";
+      $('#myModal').css('display', 'block');
+
+  })
+
+</script>
+</body>
+</html>

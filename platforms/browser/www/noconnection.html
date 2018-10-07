@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Internet Connection Failed!</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"> 
+	<link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet"  href="\css\style.css">
+	
+</head>
+<body>
+	<img src="img/WarningSign (1).png" style="width: 38%;
+	padding-top: 21%;
+	margin-left: 35%;" >
+	<h2 style="font-size: 23px;text-align: center;margin: 14px;"> Check Your Connection</h1>
+		<p style="padding-left: 2%;width: 96%;text-align: center;padding-right: 2%;">	You don't seem to have an active internet connection.
+		Please check your connection and try again. </span></p>
+		<button type="button" style="margin-left: 31%;" class="btn btn-lg btn-primary" onclick="con()" > Try Again</button>
+
+		<script src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/backButton.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="cordova.js"></script>
+		<script type="text/javascript">
+			function con()
+			{
+
+				if(navigator.network.connection.type == Connection.NONE){
+
+					window.location.href = "noconnection.html";
+					alert('Please Check Your Connection');
+				}	
+				else
+				{
+					window.location.href = "index.html";
+
+				}
+			}	
+
+			function intervalConnection()
+			{
+				if(navigator.network.connection.type == Connection.NONE) {
+
+
+					window.location.href = "noconnection.html";
+
+				}
+				else
+				{
+					window.location.href = "index.html";
+
+				}
+			}	
+
+
+$(document).ready(function(){
+	setInterval(function(){ intervalConnection(); }, 30000);
+})
+		</script>
+
+	</body>
+	</html>

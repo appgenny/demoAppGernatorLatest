@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+    <meta http-equiv="Content-Security-Policy" content="img-src *">
+    <meta name="viewport" content="width=device-width, initial-scale=1  maximum-scale=1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+
+  <title>Swiper demo</title>
+  <!-- Link Swiper's CSS -->
+ <link  rel="shortcut icon" class="icon_href" href="">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
+    <!-- <link rel="stylesheet" href="css/slid.css">
+     -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slick-theme.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="stylesheet" href="css/loader.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+  <script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/appsetting.js"></script>
+<script type="text/javascript" src="js/sliderSetting.js"></script>
+<script type="text/javascript" src="js/youtubeAndDailymotionSearch.js"></script>
+<script type="text/javascript" src="js/shortcut.js"></script>
+<script type="text/javascript" src="js/videoPost.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+ <script src="js/wallpaperPost.js"></script>
+ <script type="text/javascript" src="js/promotionLink.js"></script>
+   <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+ <!-- <script src="js/appsetting.js"></script> -->
+
+  <!-- Demo styles -->
+  <style>
+    html, body {
+      position: relative;
+      height: 100%;
+    }
+    body {
+      background: #eee;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      height: 100%;
+    }
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+
+      /* Center slide text vertically */
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body onload="onLoad()" class="home" >
+    <!--loader image starts -->
+
+<div class="lazy_loader">
+  <div class="col-xs-12 col-sm-12">
+    <div class="col-xs-3 col-sm-3">
+    <img class="lazy_loader_img" src="img/loading.gif">
+  </div>
+  <div class="col-xs-6 col-sm-6">
+    <span class="lazy_loader_text">Loading....</span>
+  </div>
+  </div>
+</div>
+<div class="loader"></div>
+    <!-- loader image ends-->
+
+<div class="complete">
+    
+  <!-- Swiper -->
+  <div id="mainSlider">
+  <div class="swiper-container">
+    <div class="swiper-wrapper">
+      
+      <div class="swiper-slide" id="swiper_first"></div>
+      <div class="swiper-slide" id="swiper_seciond"></div>
+      <div class="swiper-slide" id="swiper_third"></div>
+      <div class="swiper-slide" id="swiper_forth"></div>
+      <div class="swiper-slide" id="swiper_last"></div>
+      
+      
+    </div>
+  </div>
+  </div>
+
+  <div id="testslider"></div>
+  </div>
+
+    <script type="text/javascript" src="js/admobAds.js"></script>
+    <script type="text/javascript" src="js/backButton.js"></script>
+     <script src="js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container');
+  </script>
+    
+<script type="text/javascript">
+  function myfun() {
+
+    window.InAppYouTube.openVideo('kmi7qUJavbM', {
+          fullscreen: true
+        }, function(result) {
+           console.log(JSON.stringify(result));
+        }, function(reason) {
+          console.log(reason);
+        });
+
+
+  }
+</script>
+ 
+ <script type="text/javascript">
+    $(document).ready(function() {
+ /*
+*/
+
+$("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow .carousel-inner > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow .carousel-inner');
+},  3000);
+  $('#media').carousel({
+    pause: true,
+    interval: false,
+  });
+});
+
+$("#closeModel").click(function(){
+    //$('#myModal').css('display', 'none');
+ $("#myModal").animate({width:'toggle'},200);
+ initApp();
+});
+$('.closewallpaper').click(function(){
+  var modal = document.getElementById('wallpaperModal');
+  modal.style.display = "none";
+  $('#myModal').css('display', 'block');
+  initApp();
+})
+
+</script>
+
+</body>
+</html>
