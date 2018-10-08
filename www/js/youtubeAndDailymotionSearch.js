@@ -147,11 +147,11 @@ function runVideoPlayer(videoid , platform)
 
 			alert(videoid);
 			alert('bhai run video player kay ander');
-			$('#myModal').css('display', 'none');
-			$('#videoModal').css('display', 'block');
 			//$("#videoModal").animate({width:'toggle'},300);
 			if (platform == 'dailymotion') {
-				initAdmobWithoutBanner();
+				$('#myModal').css('display', 'none');
+			   $('#videoModal').css('display', 'block');
+			    initAdmobWithoutBanner();
 				window.screen.orientation.lock('landscape');
 				videourl = 'https://www.dailymotion.com/embed/video/'+videoid+'?queue-enable=false';
 				$('#videoplayer').attr('src' , videourl);
@@ -159,6 +159,6 @@ function runVideoPlayer(videoid , platform)
 			if(platform == 'youtube')
 			{
 				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
-				
+					
 			}
 		}
