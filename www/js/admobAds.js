@@ -76,7 +76,7 @@ function initAd(){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      //alert('onAdDismiss');
+      alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
@@ -89,13 +89,13 @@ function initAd(){
         $('#btn_showvideo').prop('disabled', true);
       }
     });
+  }
 
-    $(document).on('resume', function(){
-    $(document).on('onAdDismiss', function(e){
+   $(document).on('onAdDismiss', function(e){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      //alert('onAdDismiss');
+      alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
@@ -108,8 +108,7 @@ function initAd(){
         $('#btn_showvideo').prop('disabled', true);
       }
     });
-    });
-  }
+   
   
   function initBannerAndinterstitial()
   {
