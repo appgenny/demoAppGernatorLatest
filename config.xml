@@ -7,6 +7,7 @@
     <author email="dev@cordova.apache.org" href="http://cordova.io">
         Apache Cordova Team
     </author>
+    <icon src="www/img/icon.png"/>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -29,8 +30,8 @@
    <preference name="android-targetSdkVersion" value="27" />
    <preference name="android-build-tool" value="gradle" />
    <preference name="onesignal" value="86062c1c-731e-4018-a530-d7630cfe8300" />
-<preference name="admobBannerId" value="ca-app-pub-3940256099942544/6300978111" />
-    <preference name="admobInterstitialId" value="ca-app-pub-3940256099942544/1033173712" />
+<preference name="admobBannerId" value="ca-app-pub-2607313420010336/7643001475" />
+    <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2217508304" />
    <plugin name="cordova-plugin-whitelist" spec="1" />
     <plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
