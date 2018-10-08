@@ -72,7 +72,7 @@ function initAd(){
     $(document).on('onAdLeaveApp', function(e){
    });
     
-    $(document).on('onAdDismiss', function(e){
+  /* $(document).on('onAdDismiss', function(e){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
@@ -88,20 +88,29 @@ function initAd(){
         $('#h3_video').text('Rewarded Video');
         $('#btn_showvideo').prop('disabled', true);
       }
-    });
+    });*/
 
-    $(document).on('resume', function(){
-     //alert('onresume');
+
+ /*$(document).on('resume', function(){
+    alert('onresume');
     var openVideoModelId =  localStorage.getItem("openVideoModelId");
- if(openVideoModelId != '' || openVideoModelId != null)
+    if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
       
-     // AdMob.showInterstitial();
-    });
+     AdMob.showInterstitial();
+    });*/
   }
+  document.addEventListener('onAdDismiss', function(e){
+    if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
+      var data = e.data || e;
+      if(data.adType === 'interstitial') {
+      alert('on Ad onAdDismiss');
+
+      }
+});
   
   function initBannerAndinterstitial()
   {
@@ -126,7 +135,8 @@ function initAd(){
   function showIndustrialAd()
   {
     AdMob.showInterstitial();
-   }
+  }
+
   function  prepareInterstitialAd()
   {
     AdMob.prepareInterstitial({
