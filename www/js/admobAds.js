@@ -89,26 +89,19 @@ function initAd(){
         $('#btn_showvideo').prop('disabled', true);
       }
     });
-  }
 
-   $(document).on('onAdDismiss', function(e){
-      if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
-      var data = e.data || e;
-      if(data.adType === 'interstitial') {
-      alert('onAdDismiss');
-      var openVideoModelId =  localStorage.getItem("openVideoModelId");
-      if(openVideoModelId != '' || openVideoModelId != null)
+    $(document).on('resume', function(){
+     //alert('onresume');
+    var openVideoModelId =  localStorage.getItem("openVideoModelId");
+ if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-      }
-       else if(data.adType === 'rewardvideo') {
-        $('#h3_video').text('Rewarded Video');
-        $('#btn_showvideo').prop('disabled', true);
-      }
+      
+     // AdMob.showInterstitial();
     });
-   
+  }
   
   function initBannerAndinterstitial()
   {
