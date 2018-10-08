@@ -22,7 +22,7 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
         		var image_url = item.snippet.thumbnails.high.url
 
         		html += '<div style="margin-bottom:10px;" class="col s12 single_post_view">';
-        		html += '<div class="entry raza video_list_div">';
+        		html += '<div class="entry video_list_div">';
         		html += '<a vedioId="'+vedio_id+'" platform="youtube" style="color:#000 !important" onclick="videoModel(this)" >';
 
         		html += '<img class="lazyloadingImage" src="'+image_url+'" alt="" style="padding: 4px;border: 1px solid #c4c4c4;width: 100%;max-height: 235px;">';
@@ -124,7 +124,7 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 		videoInfo.push(platform);
 		localStorage.setItem("runVideoPlayers",JSON.stringify(videoInfo));
 		localStorage.setItem("counterAds",'0');
-		prepareInterstitialAd();
+		//prepareInterstitialAd();
 	}
 	else
 	{

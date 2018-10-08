@@ -14,7 +14,7 @@ function mainarea()
 	{
 
 		localStorage.setItem("interAdshown",'0');
-		localStorage.setItem("runVideoPlayer",'');
+		localStorage.setItem("runVideoPlayers",'0');
 		localStorage.setItem("counterAds",'0');
 		cordova.getAppVersion.getPackageName(function(pkgname){
 			appSetting(pkgname);
@@ -24,7 +24,7 @@ function mainarea()
 			cordova.getAppVersion.getPackageName(function(pkgname){
 				var response=JSON.parse((localStorage.getItem("item")));
 				sliderSettingWithData(pkgname);
-				
+
 				getAllPost(response[0], pkgname);
 				featuredAppModel(pkgname);
 			});

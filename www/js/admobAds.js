@@ -90,18 +90,28 @@ function initAd(){
       }
     });
 $(document).on('resume', function(){
-    alert('onresume');
+  alert('onresume');
   var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
     alert('induestrial true');
     localStorage.setItem("interAdshown",'0');
     var openVideoModelId =  localStorage.getItem("openVideoModelId");
+    var runVideoPlayers =JSON.parse((localStorage.getItem("runVideoPlayers")));
       if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
 
        }
+       if (runVideoPlayers != '0' || runVideoPlayers != null) 
+       {
+        alert('video running');
+         var videoId = runVideoPlayers[0];
+         var platform  = runVideoPlayers[1];
+         runVideoPlayer(videoid , platform);
+         localStorage.setItem("runVideoPlayers",'0');
+       }
+
   }
   /*  var openVideoModelId =  localStorage.getItem("openVideoModelId");
     if(openVideoModelId != '' || openVideoModelId != null)
