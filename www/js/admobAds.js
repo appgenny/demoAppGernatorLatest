@@ -71,6 +71,14 @@ function initAd(){
     });
     $(document).on('onAdLeaveApp', function(e){
    });
+    document.addEventListener('onAdDismiss',function(data){
+  console.log( data.error + ',' + data.reason );
+   if(data.adType == 'interstitial') 
+{
+      alert('on Ad onAdDismiss');
+
+}
+});
     
   /* $(document).on('onAdDismiss', function(e){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
@@ -103,14 +111,14 @@ function initAd(){
      AdMob.showInterstitial();
     });*/
   }
-  document.addEventListener('onAdDismiss', function(e){
+  /*document.addEventListener('onAdDismiss', function(e){
     if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      alert('on Ad onAdDismiss');
 
       }
 });
+  */
   
   function initBannerAndinterstitial()
   {
