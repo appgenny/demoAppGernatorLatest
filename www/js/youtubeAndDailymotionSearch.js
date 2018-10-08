@@ -145,8 +145,6 @@ function runVideoPlayer(videoid , platform)
 {
 
 
-			alert(videoid);
-			alert('bhai run video player kay ander');
 			//$("#videoModal").animate({width:'toggle'},300);
 			if (platform == 'dailymotion') {
 				$('#myModal').css('display', 'none');
