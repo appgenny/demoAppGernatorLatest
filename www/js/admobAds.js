@@ -101,12 +101,6 @@ function initAd(){
     });
 
     $(document).on('resume', function(){
-
-      if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
-      var data = e.data || e;
-      if(data.adType === 'interstitial') {
-       alert('interstitial');
-     }
      //alert('onresume');
      var openVideoModelId =  localStorage.getItem("openVideoModelId");
    var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayers")));
