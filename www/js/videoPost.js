@@ -68,7 +68,6 @@ var sum = (x*100 + y*100) / 100;
   	var id = $(object).attr('id');
   	localStorage.setItem("openVideoModelId",id);
   	localStorage.setItem("counterAds",'0');
- prepareInterstitialAd();
   }
  else
 {
