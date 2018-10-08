@@ -1,3 +1,11 @@
+ document.addEventListener('onAdDismiss',function(data){
+  console.log( data.error + ',' + data.reason );
+   if(data.adType == 'interstitial') 
+{
+      alert('on Ad onAdDismiss');
+
+}
+});
 var admobid = {};
 function onDeviceReady()
 {
@@ -71,14 +79,7 @@ function initAd(){
     });
     $(document).on('onAdLeaveApp', function(e){
    });
-    document.addEventListener('onAdDismiss',function(data){
-  console.log( data.error + ',' + data.reason );
-   if(data.adType == 'interstitial') 
-{
-      alert('on Ad onAdDismiss');
 
-}
-});
     
   /* $(document).on('onAdDismiss', function(e){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
