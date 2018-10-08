@@ -1,47 +1,44 @@
-<?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ownapp.songspak" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Pak Songs</name>
-    <description>
-        
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
-    <icon src="www/img/icon.png"/>
-    <content src="index.html" />
-    <access origin="*" />
-    <allow-intent href="http://*/*" />
-    <allow-intent href="https://*/*" />
-    <allow-intent href="tel:*" />
-    <allow-intent href="sms:*" />
-    <allow-intent href="mailto:*" />
-    <allow-intent href="geo:*" />
-    <platform name="android">
-        <allow-intent href="market:*" />
-    </platform>
-    <platform name="ios">
-        <allow-intent href="itms:*" />
-        <allow-intent href="itms-apps:*" />
-    </platform>
-    <engine name="android" spec="~7.1.1" />
-    <engine name="ios" spec="~4.5.5" />
-    <preference name="android-minSdkVersion" value="16" />
-      <preference name="android-maxSdkVersion" value="28" />
-   <preference name="android-targetSdkVersion" value="27" />
-   <preference name="android-build-tool" value="gradle" />
-   <preference name="onesignal" value="86062c1c-731e-4018-a530-d7630cfe8300" />
+<?xml version='1.0' encoding='utf-8'?> 
+<widget id="com.testumie2.xyz" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
+<name>test2</name>
+<description></description>
+<author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
+<icon src="www/img/icon.png" /> 
+<content src="index.html" /> 
+<access origin="*"/>
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" /> 
+<allow-intent href="tel:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" /> 
+<allow-intent href="geo:*" />
+<platform name="android">
+<allow-intent href="market:*" />
+</platform>
+<platform name="ios">
+<allow-intent href="itms:*" />
+<allow-intent href="itms-apps:*" />
+</platform >
+<engine name="android" spec="~7.1.1" />
+<engine name="ios" spec="~4.5.5" />
+<preference name="android-minSdkVersion" value="16" />
+<preference name="android-maxSdkVersion" value="28" />
+<preference name="android-targetSdkVersion" value="27" />
+<preference name="android-build-tool" value="gradle" />
+<preference name="StatusBarOverlaysWebView" value="true" />
+<preference name="onesignal" value="6a72499a-f281-4ab5-98ad-e714d313d5d6" />
 <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7643001475" />
-    <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2217508304" />
-   <plugin name="cordova-plugin-whitelist" spec="1" />
-    <plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
+<preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2217508304" />
+<plugin name="cordova-plugin-whitelist" spec="1" />
+<plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
- <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
- <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
- <plugin name="cordova-plugin-customconfigparameters" spec="https://github.com/experiencecommerce/cordova-plugin-customconfigparameters.git" />
-  <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
-   <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" />
-    <plugin name="com.bunkerpalace.cordova.YoutubeVideoPlayer" spec="https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git" />
-     <plugin name="com.santinowu.cordova.imagedownloader" spec="https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git">
-        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="explain why you require accessing Photo" />
-    </plugin>
+<plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
+<plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+<plugin name="cordova-plugin-customconfigparameters" spec="https://github.com/experiencecommerce/cordova-plugin-customconfigparameters.git" /> 
+<plugin name="cordova-plugin-app-version" spec="^0.1.9" /> 
+<plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" /> 
+<plugin name="com.bunkerpalace.cordova.YoutubeVideoPlayer" spec="https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git" />
+<plugin name="com.santinowu.cordova.imagedownloader" spec="https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git" >
+<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="explain why you require accessing Photo" />
+</plugin>
 </widget>
