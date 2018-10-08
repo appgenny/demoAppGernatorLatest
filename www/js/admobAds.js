@@ -104,6 +104,7 @@ function initAd(){
      //alert('onresume');
      var openVideoModelId =  localStorage.getItem("openVideoModelId");
    var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayers")));
+   alert(runVideoPlayer.length);
  if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
