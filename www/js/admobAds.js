@@ -78,40 +78,36 @@ function initAd(){
       if(data.adType === 'interstitial') {
       //alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
-      var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayer")));
       if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-       else if(runVideoPlayer.length != 0 && openVideoModelId == '' )
-       {
-        var videoId =  runVideoPlayer[0];
-        var platform = runVideoPlayer[1];
-        runVideoPlayer(videoid , platform);
-        localStorage.setItem("runVideoPlayer",'');
       }
-
-
-      } 
-        else if(data.adType === 'rewardvideo') {
+       else if(data.adType === 'rewardvideo') {
         $('#h3_video').text('Rewarded Video');
         $('#btn_showvideo').prop('disabled', true);
       }
     });
 
     $(document).on('resume', function(){
-     //alert('onresume');
-    var openVideoModelId =  localStorage.getItem("openVideoModelId");
-   //var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayers")));
-   //alert(runVideoPlayer.length);
- if(openVideoModelId != '' || openVideoModelId != null)
+    $(document).on('onAdDismiss', function(e){
+      if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
+      var data = e.data || e;
+      if(data.adType === 'interstitial') {
+      //alert('onAdDismiss');
+      var openVideoModelId =  localStorage.getItem("openVideoModelId");
+      if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-      
-     // AdMob.showInterstitial();
+      }
+       else if(data.adType === 'rewardvideo') {
+        $('#h3_video').text('Rewarded Video');
+        $('#btn_showvideo').prop('disabled', true);
+      }
+    });
     });
   }
   
