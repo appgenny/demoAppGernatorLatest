@@ -91,10 +91,10 @@ function initAd(){
     });
 $(document).on('resume', function(){
     alert('onresume');
-  var interAdshown =   localStorage.getItem("interAdshown");
-  if (interAdshown === true) {
+  var interAd =   localStorage.getItem("interAdshown");
+  if (interAd == '1') {
     alert('induestrial true');
-    localStorage.setItem("interAdshown",false);
+    localStorage.setItem("interAdshown",'0');
     var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
@@ -136,7 +136,7 @@ $(document).on('resume', function(){
   
   function showIndustrialAd()
   {
-    localStorage.setItem("interAdshown",true);
+    localStorage.setItem("interAdshown",'1');
     AdMob.showInterstitial();
     prepareInterstitialAd();
   }
