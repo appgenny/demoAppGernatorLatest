@@ -145,7 +145,8 @@ function runVideoPlayer(videoid , platform)
 {
 
 
-			//alert(videoid);
+			alert(videoid);
+			alert('bhai run video player kay ander');
 			$('#myModal').css('display', 'none');
 			$('#videoModal').css('display', 'block');
 			//$("#videoModal").animate({width:'toggle'},300);
