@@ -122,7 +122,7 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 		var videoInfo = [];
 		videoInfo.push(videoid);
 		videoInfo.push(platform);
-		localStorage.setItem("runVideoPlayer",JSON.stringify(videoInfo));
+		localStorage.setItem("runVideoPlayers",JSON.stringify(videoInfo));
 		localStorage.setItem("counterAds",'0');
 		prepareInterstitialAd();
 	}
