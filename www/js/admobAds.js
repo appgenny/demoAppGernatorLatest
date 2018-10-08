@@ -102,21 +102,15 @@ function initAd(){
 
     $(document).on('resume', function(){
      //alert('onresume');
-     var openVideoModelId =  localStorage.getItem("openVideoModelId");
-   var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayers")));
-   alert(runVideoPlayer.length);
+    var openVideoModelId =  localStorage.getItem("openVideoModelId");
+   //var runVideoPlayer = JSON.parse((localStorage.getItem("runVideoPlayers")));
+   //alert(runVideoPlayer.length);
  if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
        }
-      else if(runVideoPlayer.length != 0 && openVideoModelId == '' )
-       {
-        var videoId =  runVideoPlayer[0];
-        var platform = runVideoPlayer[1];
-        runVideoPlayer(videoid , platform);
-        localStorage.setItem("runVideoPlayer",'');
-      }
+      
      // AdMob.showInterstitial();
     });
   }
