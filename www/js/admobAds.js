@@ -106,7 +106,7 @@ $(document).on('resume', function(){
         alert('openmodel')
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'0');
-             localStorage.setItem("runVideoId",'0');
+        localStorage.setItem("runVideoId",'0');
          localStorage.setItem("runVideoplatform",'0');
 
        }
@@ -117,9 +117,13 @@ $(document).on('resume', function(){
         var videoId = runVideoId;
          var platform  = runVideoplatform;
         alert('video running' + videoId + 'platform'+platform);
-        
-         allVideoPlayer(videoid , platform);
-            localStorage.setItem("openVideoModelId",'0');
+        if(platform == 'youtube')
+      {
+        YoutubeVideoPlayer.openVideo(videoId, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+          
+      }
+
+              localStorage.setItem("openVideoModelId",'0');
              localStorage.setItem("runVideoId",'0');
              localStorage.setItem("runVideoplatform",'0');
        }
