@@ -104,11 +104,11 @@ $(document).on('resume', function(){
        {
         alert('openmodel')
         openModel(openVideoModelId);
-        localStorage.setItem("openVideoModelId",'');
+        localStorage.setItem("openVideoModelId",'0');
 
        }
        
-       if (runVideoId != '0' &&  runVideoplatform != '0') 
+     if (runVideoId != '0' &&  runVideoplatform != '0') 
        {
         var videoId = runVideoId;
          var platform  = runVideoplatform;
