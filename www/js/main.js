@@ -13,6 +13,8 @@ function mainarea()
 	else
 	{
 
+		localStorage.setItem("runVideoId",'0');
+		localStorage.setItem("runVideoplatform",'0');
 		localStorage.setItem("interAdshown",'0');
 		localStorage.setItem("runVideoPlayers",'0');
 		localStorage.setItem("counterAds",'0');

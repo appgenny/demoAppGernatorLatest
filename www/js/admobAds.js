@@ -96,20 +96,26 @@ $(document).on('resume', function(){
     alert('induestrial true');
     localStorage.setItem("interAdshown",'0');
     var openVideoModelId =  localStorage.getItem("openVideoModelId");
-    var runVideoPlayers =JSON.parse((localStorage.getItem("runVideoPlayers")));
+
+    var runVideoId = localStorage.getItem("runVideoId");
+    var runVideoplatform = localStorage.getItem("runVideoplatform");
+
       if(openVideoModelId != '' || openVideoModelId != null)
        {
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
 
        }
-       if (runVideoPlayers != '0') 
+       
+       if (runVideoId != '0' &&  runVideoplatform != '0') 
        {
-        alert('video running');
-         var videoId = runVideoPlayers[0];
-         var platform  = runVideoPlayers[1];
+        var videoId = runVideoId;
+         var platform  = runVideoplatform;
+        alert('video running' + videoId + 'platform'+platform);
+        
          runVideoPlayer(videoid , platform);
-         localStorage.setItem("runVideoPlayers",'0');
+         localStorage.setItem("runVideoId",'0');
+         localStorage.setItem("runVideoplatform",'0');
        }
 
   }
