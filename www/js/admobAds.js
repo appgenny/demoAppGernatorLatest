@@ -100,8 +100,9 @@ $(document).on('resume', function(){
     var runVideoId = localStorage.getItem("runVideoId");
     var runVideoplatform = localStorage.getItem("runVideoplatform");
 
-      if(openVideoModelId != '' || openVideoModelId != null)
+      if(openVideoModelId != '0' )
        {
+        alert('openmodel')
         openModel(openVideoModelId);
         localStorage.setItem("openVideoModelId",'');
 

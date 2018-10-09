@@ -146,7 +146,7 @@ else
 function runVideoPlayer(videoid , platform)
 {
 
-
+	alert('enter video player');
 			//$("#videoModal").animate({width:'toggle'},300);
 			if (platform == 'dailymotion') {
 				$('#myModal').css('display', 'none');
