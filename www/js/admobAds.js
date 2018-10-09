@@ -103,7 +103,7 @@ $(document).on('resume', function(){
         localStorage.setItem("openVideoModelId",'');
 
        }
-       if (runVideoPlayers != '0' || runVideoPlayers != null) 
+       if (runVideoPlayers != '0') 
        {
         alert('video running');
          var videoId = runVideoPlayers[0];
