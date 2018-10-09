@@ -118,7 +118,7 @@ $(document).on('resume', function(){
          var platform  = runVideoplatform;
         alert('video running' + videoId + 'platform'+platform);
         
-         runVideoPlayer(videoid , platform);
+         allVideoPlayer(videoid , platform);
             localStorage.setItem("openVideoModelId",'0');
              localStorage.setItem("runVideoId",'0');
              localStorage.setItem("runVideoplatform",'0');
@@ -135,11 +135,11 @@ $(document).on('resume', function(){
      //AdMob.showInterstitial();
     });
   }
-  function runVideoPlayer(videoid , platform)
+  function allVideoPlayer(videoid , platform)
 {
 
   alert('enter video player');
-      //$("#videoModal").animate({width:'toggle'},300);
+      /*//$("#videoModal").animate({width:'toggle'},300);
       if (platform == 'dailymotion') {
         $('#myModal').css('display', 'none');
          $('#videoModal').css('display', 'block');
@@ -152,9 +152,9 @@ $(document).on('resume', function(){
       {
         YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
           
-      }
+      }*/
     }
-  
+
   function initBannerAndinterstitial()
   {
     AdMob.createBanner({
