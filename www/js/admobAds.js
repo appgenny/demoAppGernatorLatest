@@ -90,24 +90,29 @@ function initAd(){
       }
     });
 $(document).on('resume', function(){
-  alert('onresume');
+  //alert('onresume');
   var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
-    alert('induestrial true');
+   // alert('induestrial true');
     localStorage.setItem("interAdshown",'0');
+    //video modal
     var openVideoModelId =  localStorage.getItem("openVideoModelId");
-
+//run video player
     var runVideoId = localStorage.getItem("runVideoId");
     var runVideoplatform = localStorage.getItem("runVideoplatform");
 
+    //wallpaper
+
+     var category_id_wallpaper = localStorage.getItem("category_id_wallpaper");
+     
       if(openVideoModelId != '0' )
        {
 
-        alert('openmodel')
         openModel(openVideoModelId);
-        localStorage.setItem("openVideoModelId",'0');
-        localStorage.setItem("runVideoId",'0');
-         localStorage.setItem("runVideoplatform",'0');
+         localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
+             localStorage.setItem("runVideoId",'0');
+             localStorage.setItem("runVideoplatform",'0');
 
        }
        
@@ -116,17 +121,36 @@ $(document).on('resume', function(){
 
         var videoId = runVideoId;
          var platform  = runVideoplatform;
-        alert('video running' + videoId + 'platform'+platform);
         if(platform == 'youtube')
       {
         YoutubeVideoPlayer.openVideo(videoId, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
           
       }
+      if (platform == 'dailymotion') {
+        $('#myModal').css('display', 'none');
+         $('#videoModal').css('display', 'block');
+          initAdmobWithoutBanner();
+        window.screen.orientation.lock('landscape');
+        videourl = 'https://www.dailymotion.com/embed/video/'+videoId+'?queue-enable=false';
+        $('#videoplayer').attr('src' , videourl);
+      }
 
-              localStorage.setItem("openVideoModelId",'0');
+            localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
              localStorage.setItem("runVideoId",'0');
              localStorage.setItem("runVideoplatform",'0');
        }
+       if(category_id_wallpaper != 0)
+       {
+         openModelWallpaper(category_id_wallpaper);
+         localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
+             localStorage.setItem("runVideoId",'0');
+             localStorage.setItem("runVideoplatform",'0');
+
+
+       }
+
 
   }
   /*  var openVideoModelId =  localStorage.getItem("openVideoModelId");
@@ -144,14 +168,7 @@ $(document).on('resume', function(){
 
   alert('enter video player');
       /*//$("#videoModal").animate({width:'toggle'},300);
-      if (platform == 'dailymotion') {
-        $('#myModal').css('display', 'none');
-         $('#videoModal').css('display', 'block');
-          initAdmobWithoutBanner();
-        window.screen.orientation.lock('landscape');
-        videourl = 'https://www.dailymotion.com/embed/video/'+videoid+'?queue-enable=false';
-        $('#videoplayer').attr('src' , videourl);
-      }
+      
       if(platform == 'youtube')
       {
         YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });

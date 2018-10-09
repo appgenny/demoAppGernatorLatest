@@ -12,9 +12,11 @@ function mainarea()
 	}
 	else
 	{
+
 		
 		localStorage.setItem("openVideoModelId",'0');
 		localStorage.setItem("runVideoId",'0');
+		localStorage.setItem('category_id_wallpaper' , '0');
 		localStorage.setItem("runVideoplatform",'0');
 		localStorage.setItem("interAdshown",'0');
 		localStorage.setItem("runVideoPlayers",'0');
