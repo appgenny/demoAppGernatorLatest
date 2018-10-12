@@ -35,7 +35,7 @@ function onDeviceReady()
     function() {
       initBannerAndinterstitial();
       showBannerAtPosition();
-    }, 5000);
+    }, 4000);
   }
 
 
@@ -58,14 +58,71 @@ function initAd(){
     // new events, with variable to differentiate: adNetwork, adType, adEvent
     $(document).on('onAdFailLoad', function(e){
       // when jquery used, it will hijack the event, so we have to get data from original event
-      if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
-      var data = e.detail || e.data || e;
+    // adType: 'banner', 'interstitial', etc.
 
-      alert('error: ' + data.error +
-        ', reason: ' + data.reason +
-        ', adNetwork:' + data.adNetwork +
-        ', adType:' + data.adType +
-          ', adEvent:' + data.adEvent); // adType: 'banner', 'interstitial', etc.
+     var interAd =   localStorage.getItem("interAdshown");
+  if (interAd == '1') {
+   // alert('induestrial true');
+    localStorage.setItem("interAdshown",'0');
+    //video modal
+    var openVideoModelId =  localStorage.getItem("openVideoModelId");
+//run video player
+    var runVideoId = localStorage.getItem("runVideoId");
+    var runVideoplatform = localStorage.getItem("runVideoplatform");
+
+    //wallpaper
+
+     var category_id_wallpaper = localStorage.getItem("category_id_wallpaper");
+     
+      if(openVideoModelId != '0' )
+       {
+
+        openModel(openVideoModelId);
+         localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
+             localStorage.setItem("runVideoId",'0');
+             localStorage.setItem("runVideoplatform",'0');
+
+       }
+       
+     if (runVideoId != '0' &&  runVideoplatform != '0') 
+       {
+
+        var videoId = runVideoId;
+         var platform  = runVideoplatform;
+        if(platform == 'youtube')
+      {
+        YoutubeVideoPlayer.openVideo(videoId, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+          
+      }
+      if (platform == 'dailymotion') {
+        $('#myModal').css('display', 'none');
+         $('#videoModal').css('display', 'block');
+          initAdmobWithoutBanner();
+        window.screen.orientation.lock('landscape');
+        videourl = 'https://www.dailymotion.com/embed/video/'+videoId+'?queue-enable=false';
+        $('#videoplayer').attr('src' , videourl);
+      }
+
+            localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
+             localStorage.setItem("runVideoId",'0');
+             localStorage.setItem("runVideoplatform",'0');
+       }
+       if(category_id_wallpaper != 0)
+       {
+         openModelWallpaper(category_id_wallpaper);
+         localStorage.setItem('category_id_wallpaper' , '0');
+         localStorage.setItem("openVideoModelId",'0');
+             localStorage.setItem("runVideoId",'0');
+             localStorage.setItem("runVideoplatform",'0');
+
+
+       }
+
+
+  }
+    
     });
     $(document).on('onAdPresent', function(e){
     });
@@ -153,14 +210,7 @@ $(document).on('resume', function(){
 
 
   }
-  /*  var openVideoModelId =  localStorage.getItem("openVideoModelId");
-    if(openVideoModelId != '' || openVideoModelId != null)
-       {
-        openModel(openVideoModelId);
-        localStorage.setItem("openVideoModelId",'');
-       }*/
-      
-     //AdMob.showInterstitial();
+ 
     });
   }
   function allVideoPlayer(videoid , platform)

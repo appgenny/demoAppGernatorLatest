@@ -17,8 +17,9 @@
 
             $('#videoModal').css('display' , 'none');
             $('#myModal').css('display' , 'block');
+            $('#video_list').css('display', 'block');
             window.screen.orientation.lock('portrait');
-          //  showBanner();
+            showBannerAtPosition();
             $('#videoplayer').attr('src', '');
         }
 
@@ -26,15 +27,16 @@
         {
             $('#videoModal').css('display' , 'none');
             $('#myModal').css('display' , 'none');
+            $('#video_list').css('display', 'block');
             $('#videoplayer').attr('src', '');
             window.screen.orientation.lock('portrait');
-            //showBanner();
+            showBannerAtPosition();
         }
         else
         {
             $('.complete').addClass('myoverlay');
              $('#backbutton').css('display','block');
-             //showBanner();
+             showBannerAtPosition();
        }
    }
 

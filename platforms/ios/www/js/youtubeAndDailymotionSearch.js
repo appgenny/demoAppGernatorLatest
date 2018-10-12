@@ -22,7 +22,7 @@ function getyoutubeVideoBySearch(keyword, type , limitVideo) {
         		var image_url = item.snippet.thumbnails.high.url
 
         		html += '<div style="margin-bottom:10px;" class="col s12 single_post_view">';
-        		html += '<div class="entry raza video_list_div">';
+        		html += '<div class="entry video_list_div">';
         		html += '<a vedioId="'+vedio_id+'" platform="youtube" style="color:#000 !important" onclick="videoModel(this)" >';
 
         		html += '<img class="lazyloadingImage" src="'+image_url+'" alt="" style="padding: 4px;border: 1px solid #c4c4c4;width: 100%;max-height: 235px;">';
@@ -106,9 +106,9 @@ var y = localStorage.getItem("counterAds");
 var x  = 1;
 var sum = (x*100 + y*100) / 100;
 localStorage.setItem("counterAds",sum);
-var response = JSON.parse((localStorage.getItem("item")));
-var admobCheck = response[7];
-var admobLimit = response[2];
+var myres = JSON.parse((localStorage.getItem("item")));
+var admobCheck = myres[7];
+var admobLimit = myres[2];
 console.log('admobLimit'+admobLimit);
 if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 {
@@ -118,19 +118,21 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	admobLimit = response[2];
 	if(counterAds == admobLimit)
 	{
-	showIndustrialAd();
-	var videoInfo = [];
-	videoInfo.push(videoid);
-	videoInfo.push(platform);
-	localStorage.setItem("runVideoPlayer",JSON.stringify(videoInfo));
-	prepareInterstitialAd();
-	localStorage.setItem("counterAds",'0');
-  	}
+		showIndustrialAd();
+		var videoInfo = [];
+		videoInfo.push(videoid);
+		videoInfo.push(platform);
+		//localStorage.setItem("runVideoPlayers",JSON.stringify(videoInfo));
+		localStorage.setItem("runVideoId",videoid);
+		localStorage.setItem("runVideoplatform",platform);
+		localStorage.setItem("counterAds",'0');
+		//prepareInterstitialAd();
+	}
 	else
 	{
 		runVideoPlayer(videoid , platform);
 	//	initAdmobWithoutBanner();
-	}
+}
 
 }
 else
@@ -144,21 +146,18 @@ else
 function runVideoPlayer(videoid , platform)
 {
 
-
-			//alert(videoid);
-			$('#myModal').css('display', 'none');
-			$('#videoModal').css('display', 'block');
 			//$("#videoModal").animate({width:'toggle'},300);
 			if (platform == 'dailymotion') {
+				$('#myModal').css('display', 'none');
+			   $('#videoModal').css('display', 'block');
+			    initAdmobWithoutBanner();
 				window.screen.orientation.lock('landscape');
 				videourl = 'https://www.dailymotion.com/embed/video/'+videoid+'?queue-enable=false';
 				$('#videoplayer').attr('src' , videourl);
 			}
 			if(platform == 'youtube')
 			{
-
-					YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
-				
-
+				YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
+					
 			}
 		}

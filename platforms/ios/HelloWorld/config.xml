@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.ownapp.songspak" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.timesvideos.oldhindisongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <feature name="LocalStorage">
         <param name="ios-package" value="CDVLocalStorage" />
     </feature>
@@ -26,12 +26,9 @@
     <feature name="OneSignalPush">
         <param name="ios-package" value="OneSignalPush" />
     </feature>
-    <name>Pak Songs</name>
-    <description>
-    </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
-    </author>
+    <name>Old Hindi Songs 4</name>
+    <description />
+    <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
     <icon src="www/img/icon.png" />
     <content src="index.html" />
     <access origin="*" />
@@ -61,7 +58,7 @@
     <preference name="android-targetSdkVersion" value="27" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="onesignal" value="86062c1c-731e-4018-a530-d7630cfe8300" />
-    <preference name="admobBannerId" value="ca-app-pub-3940256099942544/6300978111" />
-    <preference name="admobInterstitialId" value="ca-app-pub-3940256099942544/1033173712" />
+    <preference name="onesignal" value="843b9f35-3ceb-4714-8d7b-68eee28e4f50" />
+    <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7611688216" />
+    <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2846021663" />
 </widget>

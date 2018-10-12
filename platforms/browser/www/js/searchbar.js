@@ -4,12 +4,7 @@
 	
 	if(searchValue != '' && searchValue != null)
 	{
-		var y = localStorage.getItem("counterAds");
-		var x  = 1;
-//sum += countAds;
-var sum = (x*100 + y*100) / 100;
-localStorage.setItem("counterAds",sum);
-initApp();	
+	
 $('.search_result_h3').html('<h4 style="text-align:center;">Search Result...</h4>');
 $('#video_list').css('display','none');	
  $("#myModal").animate({width:'toggle'},100);
