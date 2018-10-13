@@ -1,9 +1,9 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Pak Songs",
-  "short_name": "Pak Songs",
-  "version": "com.ownapp.songspak",
+  "name": "Old Hindi Songs 4",
+  "short_name": "Old Hindi Songs 4",
+  "version": "com.timesvideos.oldhindisongs",
   "author": "Apache Cordova Team",
   "icons": [
     {
