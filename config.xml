@@ -1,43 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?> 
-<<<<<<< HEAD
-<widget id="com.timevideo.oldhindisongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
-<name>Old Hindi Songs 2</name>
-<description>Testing</description>
-<author email="dev@cordova.apache.org" href="http://cordova.io">umar draz</author>
-<onesignal>3c7937e1-73bd-4187-ab0d-d201b973c39e</onesignal>
-<icon src="www/img/icon.png" />
-<access origin="*" />
-<icon src="www/img/icon.png"/>
-<allow-intent href="http://*/*"/> 
-<allow-intent href="https://*/*"/> 
-<allow-intent href="tel: *"/> 
-<allow-intent href="sms: *" /> 
-<allow-intent href="mailto:*" /> 
-<allow-intent href="geo: *"/> 
-<platform name="android"> 
-<allow-intent href="market:*"/> 
-</platform> 
-<platform name="ios"> 
-<allow-intent href="itms:*" /> 
-<allow-intent href="itms-apps:*"/> 
-</platform> 
-<preference name="android-minSdkVersion" value="15"/> 
-<preference name="android-targetSdkVersion" value="26"/> 
-<preference name="android-maxSdkVersion" value="28" /> 
-<preference name="android-build-tool" value="gradle" /> 
-<preference name="android-windowSoftInputMode" value="stateVisible|adjustResize" /> 
-<preference name="StatusBarOverlaysWebView" value="true" /> 
- <preference name='windows-target-version' value='8.1' />  
-<preference name="onesignal" value="3c7937e1-73bd-4187-ab0d-d201b973c39e"/> 
-<engine name="android" spec="^7.0.0"/> 
-<plugin name="cordova-plugin-whitelist" spec="^1.3.3" /> 
-<plugin name="onesignal-cordova-plugin" spec="^2.4.1" /> 
-<plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" /><engine name="android" spec="^7.0.0" /> 
-<plugin name="cordova-plugin-admobpro-firebase" spec="^2.31.6" /> 
-<plugin name="cordova-plugin-network-information" spec="^2.0.1" /> 
-=======
-<widget id="com.timesvideo.oldhindivediosongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
-<name>Old Bollywood Songs</name>
+<widget id="com.timesvideos.oldhindivediosongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
+<name>Old Hindi Vedio Songs</name>
 <description></description>
 <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
 <icon src="www/img/icon.png" /> 
@@ -63,7 +26,7 @@
 <preference name="android-targetSdkVersion" value="27" />
 <preference name="android-build-tool" value="gradle" />
 <preference name="StatusBarOverlaysWebView" value="true" />
-<preference name="onesignal" value="bda2927d-5c03-40f1-baf1-a32eed20d666" />
+<preference name="onesignal" value="b2d3f791-f744-4e1c-8f2f-8cca87f2dc73" />
 <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7611688216" />
 <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2846021663" />
 <plugin name="cordova-plugin-whitelist" spec="1" />
@@ -71,7 +34,6 @@
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
 <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
 <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
->>>>>>> ca5b7b9cca38c91a9f128eb30399aee13087bce2
 <plugin name="cordova-plugin-customconfigparameters" spec="https://github.com/experiencecommerce/cordova-plugin-customconfigparameters.git" /> 
 <plugin name="cordova-plugin-app-version" spec="^0.1.9" /> 
 <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" /> 
