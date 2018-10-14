@@ -21,18 +21,18 @@ function mainarea()
 		localStorage.setItem("interAdshown",'0');
 		localStorage.setItem("runVideoPlayers",'0');
 		localStorage.setItem("counterAds",'0');
-	//	cordova.getAppVersion.getPackageName(function(pkgname){
-			appSetting('com.timesvideos.oldhindivediosongs');
-		//});
+		cordova.getAppVersion.getPackageName(function(pkgname){
+			appSetting(pkgname);
+		});
 		$(".loader").delay(3000).hide('slide',500,function()
 		{
-			//cordova.getAppVersion.getPackageName(function(pkgname){
+			cordova.getAppVersion.getPackageName(function(pkgname){
 				var response=JSON.parse((localStorage.getItem("item")));
-				sliderSettingWithData('com.timesvideos.oldhindivediosongs');
+				sliderSettingWithData(pkgname);
 
-				getAllPost(response[0], 'com.timesvideos.oldhindivediosongs');
-				featuredAppModel('com.timesvideos.oldhindivediosongs');
-			//});
+				getAllPost(response[0], pkgname);
+				featuredAppModel(pkgname);
+			});
 		});
 		setTimeout(
 			function() {
@@ -44,7 +44,7 @@ function mainarea()
 	
 
 	
-	setInterval(function(){/* ajaxContinuesly();*/ }, 6000);
+	setInterval(function(){ ajaxContinuesly(); }, 6000);
 }
 
 
