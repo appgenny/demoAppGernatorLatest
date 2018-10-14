@@ -59,7 +59,7 @@ function initAd(){
     $(document).on('onAdFailLoad', function(e){
       // when jquery used, it will hijack the event, so we have to get data from original event
     // adType: 'banner', 'interstitial', etc.
-alert('onfailLoad');
+
      var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
    // alert('induestrial true');
@@ -133,7 +133,7 @@ alert('onfailLoad');
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      alert('onAdDismiss');
+     // alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
@@ -147,7 +147,7 @@ alert('onfailLoad');
       }
     });
 $(document).on('resume', function(){
-  alert('onresume');
+  //alert('onresume');
 
   var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
