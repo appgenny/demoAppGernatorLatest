@@ -59,7 +59,7 @@ function initAd(){
     $(document).on('onAdFailLoad', function(e){
       // when jquery used, it will hijack the event, so we have to get data from original event
     // adType: 'banner', 'interstitial', etc.
-
+alert('onfailLoad');
      var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
    // alert('induestrial true');
@@ -119,7 +119,7 @@ function initAd(){
 
 
        }
-
+     prepareInterstitialAd();
 
   }
     
@@ -147,7 +147,8 @@ function initAd(){
       }
     });
 $(document).on('resume', function(){
-  //alert('onresume');
+  alert('onresume');
+
   var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
    // alert('induestrial true');
@@ -208,7 +209,7 @@ $(document).on('resume', function(){
 
        }
 
-
+prepareInterstitialAd(); 
   }
  
     });
