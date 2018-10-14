@@ -109,7 +109,8 @@ localStorage.setItem("counterAds",sum);
 var myres = JSON.parse((localStorage.getItem("item")));
 var admobCheck = myres[7];
 var admobLimit = myres[2];
-console.log('admobLimit'+admobLimit);
+var counterAds = localStorage.getItem("counterAds");
+
 if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 {
 	var counter = 0;
@@ -118,11 +119,11 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	admobLimit = response[2];
 	if(counterAds == admobLimit)
 	{
+		console.log('admobLimit'+admobLimit);
+        console.log('counterAds'+counterAds);
 		showIndustrialAd();
 		var videoInfo = [];
-		videoInfo.push(videoid);
-		videoInfo.push(platform);
-		//localStorage.setItem("runVideoPlayers",JSON.stringify(videoInfo));
+		
 		localStorage.setItem("runVideoId",videoid);
 		localStorage.setItem("runVideoplatform",platform);
 		localStorage.setItem("counterAds",'0');
@@ -130,6 +131,7 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 	}
 	else
 	{
+		prepareInterstitialAd();
 		runVideoPlayer(videoid , platform);
 	//	initAdmobWithoutBanner();
 }
@@ -137,6 +139,7 @@ if(admobCheck == 'admobRunning' &&  admobLimit > 0 )
 }
 else
 {
+	prepareInterstitialAd();
 	runVideoPlayer(videoid , platform);
 	//initAdmobWithoutBanner();
 }

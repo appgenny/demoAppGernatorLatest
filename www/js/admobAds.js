@@ -244,6 +244,7 @@ $(document).on('resume', function(){
   }
   function showBannerAtPosition(){
     if(AdMob) AdMob.showBanner(AdMob.AD_POSITION.BOTTOM_CENTER);
+    prepareInterstitialAd();
   }
   
   function showIndustrialAd()
