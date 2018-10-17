@@ -41,4 +41,7 @@
      <plugin name="com.santinowu.cordova.imagedownloader" spec="https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git">
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="explain why you require accessing Photo" />
     </plugin>
+    <plugin name="cordova-android-play-services-gradle-release" spec="^1.4.4">
+        <variable name="PLAY_SERVICES_VERSION" value="15.+" />
+    </plugin>
 </widget>

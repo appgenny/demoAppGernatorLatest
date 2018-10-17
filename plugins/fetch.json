@@ -116,7 +116,7 @@
   "cordova-android-play-services-gradle-release": {
     "source": {
       "type": "registry",
-      "id": "cordova-android-play-services-gradle-release"
+      "id": "cordova-android-play-services-gradle-release@^1.4.4"
     },
     "is_top_level": true,
     "variables": {}
