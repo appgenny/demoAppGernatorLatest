@@ -214,18 +214,18 @@ prepareInterstitialAd();
  
     });
   }
-  function allVideoPlayer(videoid , platform)
+  /*function allVideoPlayer(videoid , platform)
 {
 
   alert('enter video player');
-      /*//$("#videoModal").animate({width:'toggle'},300);
+      //$("#videoModal").animate({width:'toggle'},300);
       
       if(platform == 'youtube')
       {
         YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
           
-      }*/
-    }
+      }
+    }*/
 
   function initBannerAndinterstitial()
   {

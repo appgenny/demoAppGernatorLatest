@@ -79,7 +79,7 @@ var id = $(object).attr('id');
 }
 else
 {
-//prepareInterstitialAd();  
+prepareInterstitialAd();  
 var id = $(object).attr('id');
 openModel(id);
 }
