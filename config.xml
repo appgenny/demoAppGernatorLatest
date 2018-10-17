@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?> 
-<widget id="com.timesvideos.oldhindivediosongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
-<name>Old Hindi Vedio Songs</name>
+<widget id="com.times.oldhindisongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
+<name>1000+ Old Hindi Songs</name>
 <description></description>
 <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
 <icon src="www/img/icon.png" /> 
@@ -26,7 +26,7 @@
 <preference name="android-targetSdkVersion" value="27" />
 <preference name="android-build-tool" value="gradle" />
 <preference name="StatusBarOverlaysWebView" value="true" />
-<preference name="onesignal" value="b2d3f791-f744-4e1c-8f2f-8cca87f2dc73" />
+<preference name="onesignal" value="4e466e0e-4389-4c50-974f-40a0d634fd6b" />
 <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7611688216" />
 <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2846021663" />
 <plugin name="cordova-plugin-whitelist" spec="1" />
