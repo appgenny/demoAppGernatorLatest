@@ -32,13 +32,13 @@
 <plugin name="cordova-plugin-whitelist" spec="1" />
 <plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
-<plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
-<plugin name="cordova-plugin-network-information" spec="^2.0.1" />
-<plugin name="cordova-plugin-customconfigparameters" spec="https://github.com/experiencecommerce/cordova-plugin-customconfigparameters.git" /> 
-<plugin name="cordova-plugin-app-version" spec="^0.1.9" /> 
-<plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" /> 
-<plugin name="com.bunkerpalace.cordova.YoutubeVideoPlayer" spec="https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git" />
-<plugin name="com.santinowu.cordova.imagedownloader" spec="https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git" >
-<variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="explain why you require accessing Photo" />
-</plugin>
+ <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
+ <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
+ <plugin name="cordova-plugin-customconfigparameters" spec="https://github.com/experiencecommerce/cordova-plugin-customconfigparameters.git" />
+  <plugin name="cordova-plugin-app-version" spec="^0.1.9" />
+   <plugin name="cordova-plugin-screen-orientation" spec="^3.0.1" />
+    <plugin name="com.bunkerpalace.cordova.YoutubeVideoPlayer" spec="https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git" />
+     <plugin name="com.santinowu.cordova.imagedownloader" spec="https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git">
+        <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value="explain why you require accessing Photo" />
+    </plugin>
 </widget>
