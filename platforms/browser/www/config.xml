@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.timesvideos.oldhindisongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>Old Hindi Songs 4</name>
+<widget id="com.times.oldhindisongs" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>1000+ Old Hindi Songs</name>
     <description />
     <author email="dev@cordova.apache.org" href="http://cordova.io">Apache Cordova Team</author>
     <icon src="www/img/icon.png" />
@@ -14,10 +14,10 @@
     <allow-intent href="geo:*" />
     <preference name="android-minSdkVersion" value="16" />
     <preference name="android-maxSdkVersion" value="28" />
-    <preference name="android-targetSdkVersion" value="27" />
+    <preference name="android-targetSdkVersion" value="26" />
     <preference name="android-build-tool" value="gradle" />
     <preference name="StatusBarOverlaysWebView" value="true" />
-    <preference name="onesignal" value="843b9f35-3ceb-4714-8d7b-68eee28e4f50" />
+    <preference name="onesignal" value="4e466e0e-4389-4c50-974f-40a0d634fd6b" />
     <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7611688216" />
     <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2846021663" />
 </widget>

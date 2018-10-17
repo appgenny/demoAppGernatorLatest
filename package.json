@@ -43,6 +43,9 @@
             "com.bunkerpalace.cordova.YoutubeVideoPlayer": {},
             "com.santinowu.cordova.imagedownloader": {
                 "PHOTOLIBRARY_USAGE_DESCRIPTION": "explain why you require accessing Photo"
+            },
+            "cordova-android-play-services-gradle-release": {
+                "PLAY_SERVICES_VERSION": "15.+"
             }
         },
         "platforms": [

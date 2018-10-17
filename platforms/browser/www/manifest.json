@@ -1,9 +1,9 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "Old Hindi Songs 4",
-  "short_name": "Old Hindi Songs 4",
-  "version": "com.timesvideos.oldhindisongs",
+  "name": "1000+ Old Hindi Songs",
+  "short_name": "1000+ Old Hindi Songs",
+  "version": "com.times.oldhindisongs",
   "author": "Apache Cordova Team",
   "icons": [
     {

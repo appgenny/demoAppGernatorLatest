@@ -119,7 +119,7 @@ function initAd(){
 
 
        }
-
+     prepareInterstitialAd();
 
   }
     
@@ -133,7 +133,7 @@ function initAd(){
       if(typeof e.originalEvent !== 'undefined') e = e.originalEvent;
       var data = e.data || e;
       if(data.adType === 'interstitial') {
-      alert('onAdDismiss');
+     // alert('onAdDismiss');
       var openVideoModelId =  localStorage.getItem("openVideoModelId");
       if(openVideoModelId != '' || openVideoModelId != null)
        {
@@ -148,6 +148,7 @@ function initAd(){
     });
 $(document).on('resume', function(){
   //alert('onresume');
+
   var interAd =   localStorage.getItem("interAdshown");
   if (interAd == '1') {
    // alert('induestrial true');
@@ -208,23 +209,23 @@ $(document).on('resume', function(){
 
        }
 
-
+prepareInterstitialAd(); 
   }
  
     });
   }
-  function allVideoPlayer(videoid , platform)
+  /*function allVideoPlayer(videoid , platform)
 {
 
   alert('enter video player');
-      /*//$("#videoModal").animate({width:'toggle'},300);
+      //$("#videoModal").animate({width:'toggle'},300);
       
       if(platform == 'youtube')
       {
         YoutubeVideoPlayer.openVideo(videoid, function(result) { console.log('YoutubeVideoPlayer result = ' + result); });
           
-      }*/
-    }
+      }
+    }*/
 
   function initBannerAndinterstitial()
   {
