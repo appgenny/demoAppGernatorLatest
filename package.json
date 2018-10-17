@@ -13,6 +13,7 @@
         "com.bunkerpalace.cordova.YoutubeVideoPlayer": "https://github.com/JonSmart/CordovaYoutubeVideoPlayer.git",
         "com.santinowu.cordova.imagedownloader": "https://github.com/Santino-Wu/cordova-plugin-imagedownloader.git",
         "cordova-android": "^7.1.1",
+        "cordova-android-play-services-gradle-release": "^1.4.4",
         "cordova-ios": "^4.5.5",
         "cordova-plugin-admobpro": "^2.31.6",
         "cordova-plugin-app-version": "^0.1.9",
