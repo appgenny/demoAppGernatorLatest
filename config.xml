@@ -30,7 +30,7 @@
 <preference name="admobBannerId" value="ca-app-pub-2607313420010336/7611688216" />
 <preference name="admobInterstitialId" value="ca-app-pub-2607313420010336/2846021663" />
 <plugin name="cordova-plugin-whitelist" spec="1" />
- <plugin name="cordova-plugin-admobpro" source="https://github.com/floatinghotpot/cordova-admob-pro" spec="2.35.0" />
+ <plugin name="cordova-plugin-admobpro" spec="https://github.com/floatinghotpot/cordova-admob-pro" />
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
  <plugin name="cordova-plugin-statusbar" spec="https://github.com/apache/cordova-plugin-statusbar.git" />
  <plugin name="cordova-plugin-network-information" spec="^2.0.1" />
