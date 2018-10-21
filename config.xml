@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?> 
-<widget id="" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
-<name>Nusrat </name>
+<widget id="" version="1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0"> 
+<name>Nusrat</name>
 <description></description>
 <author email="umardraz651@gmail.com" href="http://cordova.io">AIRVOX Solution</author>
 <icon src="www/img/icon.png" /> 
@@ -27,8 +27,8 @@
 <preference name="android-build-tool" value="gradle" />
 <preference name="StatusBarOverlaysWebView" value="true" />
 <preference name="onesignal" value="bde2534a-6c48-4ad7-aa3b-9547356c8aa3" />
-<preference name="admobBannerId" value="ca-app-pub-3940256099942544/6300978111" />
-<preference name="admobInterstitialId" value="ca-app-pub-3940256099942544/1033173712" />
+<preference name="admobBannerId" value="ca-app-pub-3940256099942544/6300978122" />
+<preference name="admobInterstitialId" value="ca-app-pub-3940256099942544/1033173711" />
 <plugin name="cordova-plugin-whitelist" spec="1" />
 <plugin name="cordova-plugin-admobpro" spec="^2.31.6" />
 <plugin name="onesignal-cordova-plugin" source="npm" spec="2.3.3" />
